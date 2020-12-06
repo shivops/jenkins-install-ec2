@@ -1,0 +1,7 @@
+---
+- name: Install jenkins build tool 'maven'
+  become: true
+  apt:
+   name:
+    - maven
+   state: present

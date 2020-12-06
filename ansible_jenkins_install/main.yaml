@@ -1,0 +1,13 @@
+---
+- name: Install Jenkins on AWS ec2
+  hosts: ec2_host
+  gather_facts: false
+  become: true
+  become_user: root
+  remote_user: ubuntu
+  roles:
+    - update
+    - java
+    - maven
+    - jenkins
+  
